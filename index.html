@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(90deg, #1a1a2e 0%, #1a1a2e 50%, #16213e 100%);
+        }
+
+        .card {
+            background-color: #16213e;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-input {
+            background-color: #0f3460;
+            border: 1px solid #16213e;
+            transition: all 0.3s;
+        }
+
+        .contact-input:focus {
+            outline: none;
+            border-color: #533483;
+            box-shadow: 0 0 0 2px rgba(83, 52, 131, 0.5);
+        }
+
+        /* Custom SVG icons for portfolio */
+        .icon {
+            fill: currentColor;
+            width: 2rem;
+            height: 2rem;
+        }
+    </style>
+</head>
+
+<body class="gradient-bg">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Mirza Azmath Baig</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-white hover:text-blue-400 transition-colors duration-200">About</a></li>
+                    <li><a href="#skills" class="text-white hover:text-blue-400 transition-colors duration-200">Skills</a></li>
+                    <li><a href="#projects" class="text-white hover:text-blue-400 transition-colors duration-200">Projects</a></li>
+                    <li><a href="#contact" class="text-white hover:text-blue-400 transition-colors duration-200">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center">
+            <div class="max-w-3xl space-y-4">
+                <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight text-white">Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Mirza Azmath Baig</span></h1>
+                <p class="text-xl sm:text-2xl text-gray-300">A passionate Data Analyst specializing in uncovering insights and telling stories with data.</p>
+                <div class="flex justify-center space-x-4 pt-4">
+                    <a href="#projects" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-semibold transition-colors duration-200 shadow-lg">View My Work</a>
+                    <a href="#contact" class="px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-full font-semibold transition-colors duration-200 shadow-lg">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold mb-4 text-white">About Me</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I am a dedicated data analyst who enjoys transforming complex datasets into useful insights. I have strong skills in MySQL, Python, and Excel. I am good at data manipulation and analysis. I also use Power BI and Tableau to create effective dashboards and visualizations. I focus on turning raw data into engaging stories that support informed decision-making and tackle real business problems.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="photo(2).jpg" 
+        alt="A professional portrait of Mirza Azmath Baig" 
+        class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg border-4 border-blue-400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <!-- MySQL Skill Card -->
+                <div class="card p-6 rounded-xl text-center space-y-4">
+                    <svg class="icon mx-auto text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm-3-8c-2.761 0-5-2.239-5-5s2.239-5 5-5 5 2.239 5 5-2.239 5-5 5zm9-5c0 1.657-.895 3-2 3-1.105 0-2-1.343-2-3s.895-3 2-3c1.105 0 2 1.343 2 3zm-2.5-8c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5c1.381 0 2.5-1.119 2.5-2.5S17.881 3 16.5 3z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-white">MySQL</h3>
+                </div>
+                <!-- Power BI Skill Card -->
+                <div class="card p-6 rounded-xl text-center space-y-4">
+                    <svg class="icon mx-auto text-purple-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 22a10 10 0 110-20 10 10 0 010 20zm-4-8h8a2 2 0 002-2V8a2 2 0 00-2-2h-8a2 2 0 00-2 2v4a2 2 0 002 2zm2-8h4a.5.5 0 01.5.5v3a.5.5 0 01-.5.5h-4a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-white">Power BI</h3>
+                </div>
+                <!-- Python Skill Card -->
+                <div class="card p-6 rounded-xl text-center space-y-4">
+                    <svg class="icon mx-auto text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 5.5h-11a2.5 2.5 0 00-2.5 2.5v11a2.5 2.5 0 002.5 2.5h11a2.5 2.5 0 002.5-2.5v-11a2.5 2.5 0 00-2.5-2.5z" />
+                        <path fill="#2563EB" d="M18.5 2.5h-11a2.5 2.5 0 00-2.5 2.5v11a2.5 2.5 0 002.5 2.5h11a2.5 2.5 0 002.5-2.5v-11a2.5 2.5 0 00-2.5-2.5z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-white">Python</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example Project Card -->
+                <div class="card rounded-xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <svg class="w-12 h-12 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m-6 0h6" />
+                            </svg>
+                            <h3 class="text-2xl font-semibold text-white">Vendor Performance Analysis</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">The project analyses an inventory database to evaluate vendor performance and profitability. It involves data cleaning, calculating key performance indicators, and using statistical analysis to compare top-performing and low-performing vendors.</p>
+                        <a href="https://github.com/mirzabaig2024/Vendor_performance_project" target="_blank" class="inline-block text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-200">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">Let's Connect</h2>
+            <div class="flex justify-center space-x-6">
+                <!-- Gmail Logo -->
+                <a href="mailto:mirzaazmath753@gmail.com" class="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                    <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6.54L12 11.54L4 6.54V6L20 6.54ZM20 18V7.54L12 12.54L4 7.54V18H20Z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <!-- GitHub Logo -->
+                <a href="https://github.com/mirzabaig2024/MAB-sPortfolio.in.git" target="_blank" class="text-white hover:text-gray-400 transition-colors duration-200">
+                    <svg class="w-16 h-16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.864 8.167 6.83 9.49C9.074 21.688 9.24 21.574 9.24 21.366v-1.761c-2.775.604-3.352-1.336-3.352-1.336-.453-1.15-.992-1.46-1.077-1.503-.89-.607-.066-.62.066-.62.827.058 1.26.85 1.26.85.748 1.285 1.966.914 2.45.698.075-.542.292-.914.53-1.124-1.872-.21-3.84-1.008-3.84-4.116 0-.909.324-1.656.85-2.24-1.127-.215-2.316-1.11-2.316-3.141 0-.698.24-1.286.634-1.74-.064-.215-.276-.99.066-1.724 0 0 .52-.172 1.7.697 1.62-.45 3.344-.45 4.964 0 1.18-.869 1.7-.697 1.7-.697.34 1.284.128 2.069.066 1.724.57 0 .86.51.86 1.74 0 3.116-1.968 3.906-3.84 4.116.308.266.586.772.586 1.558v2.324c0 .208.164.322.404.286 3.966-1.323 6.83-5.071 6.83-9.49C22 6.477 17.523 2 12 2z"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-500">
+        <p>&copy; 2024 Mirza Azmath Baig. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
